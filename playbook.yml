@@ -5,7 +5,7 @@
 
   vars:
 
-    example_var: "xurepinha"
+    example_var: "bla"
 
   roles:
-    - ansible-role-pykota
+    - ansible-role-example
