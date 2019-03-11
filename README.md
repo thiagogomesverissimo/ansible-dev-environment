@@ -1,7 +1,13 @@
-## my ansible dev environment
+## ansible dev environment
 
 This repo contains some files organized to speed up the setup of the 
 environment to develop my ansible roles using virtualbox and vagrant
+
+Download it (I prefer not to clone due to I use this repo only as base to develop roles):
+
+    wget https://github.com/thiagogomesverissimo/ansible-dev-environment/archive/master.zip -O ansible-dev-environment.zip
+    unzip ansible-dev-environment.zip
+    cd ansible-dev-environment-master
 
 Up VMs:
 
@@ -14,7 +20,7 @@ Create roles folder and clone ansible roles repos inside it:
     cd roles
     git clone YOUR-ROLE
 
-Edit the playbook to fit your needs and be happy:
+Edit the playbook.yml to fit your needs and be happy:
 
     ansible-playbook playbook.yml
 
