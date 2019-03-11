@@ -5,9 +5,9 @@ environment to develop my ansible roles using virtualbox and vagrant
 
 Download it (I prefer not to clone due to I use this repo only as base to develop roles):
 
-    wget https://github.com/thiagogomesverissimo/ansible-dev-environment/archive/master.zip -O ansible-dev-environment.zip
-    unzip ansible-dev-environment.zip
-    cd ansible-dev-environment-master
+    wget https://github.com/thiagogomesverissimo/ansible-dev-environment/archive/master.zip
+    unzip master.zip
+    mv ansible-dev-environment-master developing-awesome-role
 
 Up VMs:
 
