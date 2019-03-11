@@ -1,0 +1,7 @@
+[vagrant]
+debian ansible_host="192.168.77.41"
+ubuntu ansible_host="192.168.77.42"
+
+[vagrant:vars]
+ansible_user="vagrant"
+ansible_ssh_private_key_file="~/.vagrant.d/insecure_private_key"

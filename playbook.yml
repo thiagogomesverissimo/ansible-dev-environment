@@ -1,0 +1,11 @@
+---
+- name: deploy
+  become: yes
+  hosts: debian, ubuntu
+
+  vars:
+
+    example_var: "xurepinha"
+
+  roles:
+    - ansible-role-pykota
