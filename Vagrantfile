@@ -18,7 +18,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     end
   end
 
-  config.vm.define "ubuntu" do |host| 
+  config.vm.define "virtualboxubuntu1804" do |host| 
     host.vm.box = "bento/ubuntu-18.04"
     host.vm.network :private_network, ip: "192.168.77.42"
     config.ssh.insert_key = false # important
@@ -34,4 +34,19 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     end
   end
 
+##
+  config.vm.define "libvirtdebian8" do |host|
+    host.vm.hostname = "libvirtdebian8"
+    config.ssh.insert_key = false # important
+    host.vm.box = "generic/debian8"
+    host.vm.network :private_network,
+      :ip => "192.168.2.43",
+      :libvirt__network_name => "ansible-dev-environment",
+      :libvirt__forward_mode => "nat"
+    host.vm.provider :libvirt do |v|
+      v.memory = 256
+      v.cpus = 1
+    end
+  end
+  
 end
