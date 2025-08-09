@@ -38,6 +38,19 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     end
 
     # 192.168.7.3
+    config.vm.define "debian12" do |host|
+      host.vm.hostname = "debian12"
+      host.vm.box = "debian/bookworm64"
+      host.vm.network :private_network,
+        :ip => "192.168.7.3",
+        :libvirt__network_name => "devenv",
+        :libvirt__forward_mode => "nat"
+      host.vm.provider :libvirt do |v|
+        v.memory = 2048
+        v.cpus = 2
+      end
+    end
+
     # 192.168.7.4
     # 192.168.7.5
     # 192.168.7.6
